@@ -1,0 +1,7 @@
+domain: datacom.build
+repo: github.com/chrismellard/secret-operator
+resources:
+- group: secret-operator
+  kind: SecretClaim
+  version: v1alpha1
+version: "2"
