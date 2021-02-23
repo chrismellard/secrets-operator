@@ -26,3 +26,23 @@ rules:
   - get
   - patch
   - update
+- apiGroups:
+  - secret-operator.io
+  resources:
+  - secretstores
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - secret-operator.io
+  resources:
+  - secretstores/status
+  verbs:
+  - get
+  - patch
+  - update

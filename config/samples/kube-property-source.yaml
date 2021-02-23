@@ -1,14 +1,16 @@
 apiVersion: secret-operator.io/v1alpha1
 kind: SecretClaim
 metadata:
-  name: set-of-secret-claims
+  name: kube-property-source
 spec:
   kubernetes:
     name: password-dest
     namespace: default
     secretType: Opaque
     labels:
-
+      app: custom
+    annotations:
+      do-not-delete: 'true'
     properties:
     - name: someHmacToken
       source:

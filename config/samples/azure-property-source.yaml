@@ -1,0 +1,19 @@
+apiVersion: secret-operator.io/v1alpha1
+kind: SecretClaim
+metadata:
+  name: azure-property-source
+spec:
+  azureKeyVault:
+    name: password-dest
+    secretStoreRef:
+      name: azureSecretStore
+    properties:
+    - name: someHmacToken
+      source:
+        generator:
+          hmac: true
+    - name: somePassword
+      source:
+        generator:
+          password:
+            length: 20
